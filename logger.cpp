@@ -35,8 +35,9 @@ std::ostream& Logger::start(log_rank_t log_rank,const int32_t line,const std::st
     char time_string[128];
     ctime_r(&tm,time_string);
     return getStream(log_rank)<<time_string<<"function("<<function<<")"
-                                            <<"line"<<line      
+                                            <<"line"<<line   
                                             <<std::flush;
+                                            
 }
 
 Logger::~Logger(){
